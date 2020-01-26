@@ -3,7 +3,7 @@ import store from '@/store';
 import router from '@/router';
 import axios from '@/http';
 import api from '@/api/login/loginApi';
-console.log(api)
+
 @Module({
 	name: 'LoginModule',
 	namespaced: true,
@@ -75,6 +75,5 @@ export default class LoginModule extends VuexModule {
 		if(res.data.ret==0){
 			router.push('/')
 		}
-		
 	}
 }
