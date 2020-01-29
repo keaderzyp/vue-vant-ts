@@ -3,13 +3,10 @@ interface LoginParams{
 	username?:string;
 	password?:string;
 }
-const api = {
-	async getLogin(data:LoginParams){
-		return await axios({
-			url:'/login',
-			method:'post',
-			data
-		})
-	}
+export const getLogin = async (data:LoginParams){
+	return await axios({
+		url:'/login',
+		method:'post',
+		data
+	})
 }
-export default api;

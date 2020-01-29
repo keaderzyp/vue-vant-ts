@@ -14,6 +14,7 @@
 </template>
 
 <script>
+	import '@/modules/login/loginModule';
 	import {
 		Vue,
 		Component

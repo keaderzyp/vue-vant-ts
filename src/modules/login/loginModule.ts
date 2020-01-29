@@ -1,8 +1,7 @@
 import { Module, VuexModule, Mutation, Action } from 'vuex-module-decorators';
 import store from '@/store';
 import router from '@/router';
-import axios from '@/http';
-import api from '@/api/login/loginApi';
+import {getLogin} from '@/api/login/loginApi';
 
 @Module({
 	name: 'LoginModule',
@@ -67,7 +66,7 @@ export default class LoginModule extends VuexModule {
 		}
 		this.setLoading(true);
 		let _this = this;
-		let res = await api.getLogin({
+		let res = await getLogin({
 			username:this.getUsername,
 			password:this.getPassword
 		});
